@@ -25,7 +25,7 @@ namespace ASPNET
 
         public Product GetProduct(int id)
         {
-            return (Product)_conn.QuerySingle<Product>("SELECT FROM PRODUCTS WHERE PRODUCTID=@id", new { id = id });
+            return (Product)_conn.QuerySingle<Product>("SELECT * FROM PRODUCTS WHERE PRODUCTID=@id", new { id = id });
         }
 
         
