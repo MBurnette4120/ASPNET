@@ -22,5 +22,7 @@ namespace ASPNET
         {
             return _conn.Query<Product>("SELECT * FROM PRODUCTS;");
         }
+
+        
     }
 }
