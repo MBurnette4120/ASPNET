@@ -34,4 +34,20 @@
     }
 </div>
 
+<div>
+    @using (Html.BeginForm("UpdateProduct", "Product", "Post"))
+    {
+<input type="hidden" asp-for="ProductID" value="@Model.ProductID" />
+                <input type="submit" class="btn btn-block btn-info " onclick="return confirm('Are you sure?')" value="Update this product" />}
+</div><br />
+
+
+<div>
+    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
+    {
+<input type="hidden" asp-for="ProductID" value="@Model.ProductID" />
+                <input type="submit" class="btn btn-danger btn-block" onclick="return confirm('Are you sure?')" value="Delete this product" />}
+</div>
+
+
 
